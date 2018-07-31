@@ -7,7 +7,7 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '*';
+const prefix = '$$';
 client.on('ready', function() {
     console.log(`i am ready ${client.user.username}`);
 });
@@ -227,19 +227,19 @@ function isYoutube(str) {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
      .addField(`**__أوامر البوت__**`,`
-.    **${prefix}play
+       **${prefix}play**
    امر تشغيل الأغنية , !شغل الرابط او اسم الأعنية
-       ${prefix}stop
+       **${prefix}stop**
         ايقاف الاغنية 
-       ${prefix}skip
+       **${prefix}skip**
      امر تخطي الاغنية
-       ${prefix}vol
+       **${prefix}vol**
     تغير مستوى الصوت 1 - 100
-       ${prefix}pause
+       **${prefix}pause**
       ايقاف الاغنية مؤقتا 
-       ${prefix}resume
+       **${prefix}resume**
        امر تكملة الاغنية
-       ${prefix}move
+       **${prefix}move**
    سحب البوت او ادخال البوت الى روم
    
      prefix = ${prefix}
@@ -255,7 +255,7 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id !== "327042370644213761") return;
+  if (message.author.id !== "324672376455299074") return;
 
   
   if (message.content.startsWith(prefix + 'setwatch')) {
